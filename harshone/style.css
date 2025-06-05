@@ -1,0 +1,102 @@
+/*
+Theme Name: Harshone
+Theme URI: https://themeforest.net/user/your_username/portfolio
+Author: Harshone Themes
+Author URI: https://harshonethemes.com
+Description: Harshone is a premium WordPress WooCommerce theme for modern online shops. Built with Bootstrap 5, optimized for SEO, and fully compatible with Elementor, it offers flexible header and footer options, One-Click Demo Import, and seamless updates.
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: harshone
+Domain Path: /languages
+Tags: ecommerce, woocommerce, responsive-layout, clean, modern, blog, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, jetpack, left-sidebar, news, one-column, portfolio, post-formats, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
+
+A premium WordPress WooCommerce theme for modern online shops.
+
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.container {
+    max-width: 1200px; /* Or custom based on design */
+}
+
+/*--------------------------------------------------------------
+# Header & Footer
+--------------------------------------------------------------*/
+.site-header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.site-footer {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation li {
+    display: inline-block;
+    position: relative;
+}
+
+.main-navigation a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.main-navigation a:hover {
+    color: #007bff;
+}
+
+/*--------------------------------------------------------------
+# WooCommerce
+--------------------------------------------------------------*/
+.woocommerce ul.products li.product .price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.woocommerce .button.add_to_cart_button {
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+/* Add more custom styles as needed for your specific design */

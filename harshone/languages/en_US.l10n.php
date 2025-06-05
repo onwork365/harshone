@@ -1,0 +1,2 @@
+<?php
+return ['project-id-version'=>'Harshone 1.0.0','report-msgid-bugs-to'=>'https://harshonethemes.com/contact','pot-creation-date'=>'2023-11-01 10:00+0000','po-revision-date'=>'2025-05-30 21:10+0000','last-translator'=>'','language-team'=>'Harshone Team <harshone@harshonethemes.com>','language'=>'en_US','mime-version'=>'1.0','content-type'=>'text/plain; charset=UTF-8','content-transfer-encoding'=>'8bit','x-generator'=>'Loco https://localise.biz/','plural-forms'=>'nplurals=2; plural=(n != 1);','x-loco-version'=>'2.8.0; wp-6.8.1; php-8.2.4','messages'=>[]];

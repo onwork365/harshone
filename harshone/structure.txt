@@ -1,0 +1,163 @@
+Premium WordPress theme utilizing the Redux framework, and name it HarshOne. Using Bootstrap framework and is optimized for SEO. Compatible with woocommerce. Option to select from 2 distinct header designs and footer designs. The theme is fully compliant with ThemeForest guidelines and generate all themeforest required files. Theme update from https://punsys/update/harshone and One Click Demo Import from https://punsys/demo/harshone. Check plugins active like woocommerce. Add search form and maintenance page.
+Customization, Professional Design, E-commerce Ready and Responsive Design.
+Generate full structure of theme.
+
+
+HarshOne WordPress Theme Structure
+Theme Name: HarshOne
+Frameworks: Redux, Bootstrap (v5 recommended)
+Compatibility: WooCommerce, Elementor
+Key Features: Responsive, SEO Optimized, 2 Header Designs, 2 Footer Designs, Search Form, Maintenance Mode, One-Click Demo Import, Automatic Updates.
+
+harshone/
+├── style.css                 ; Primary stylesheet, theme information (required by WordPress)
+├── functions.php             ; All theme functions, hooks, and integrations
+├── screenshot.png            ; Screenshot for theme preview (1200x900px, required by WordPress)
+├── index.php                 ; Fallback template (required by WordPress)
+├── header.php                ; Thematic header template
+├── footer.php                ; Thematic footer template
+├── sidebar.php               ; Thematic sidebar template
+├── 404.php                   ; Error 404 page template
+├── single.php                ; Single post template
+├── page.php                  ; Single page template
+├── archive.php               ; Archive template (posts, categories, tags)
+├── search.php                ; Search results template
+├── searchform.php            ; Custom search form template
+├── comments.php              ; Comments template
+├── woocommerce.php           ; WooCommerce wrapper template (for default WC pages)
+├── maintenance.php           ; Maintenance mode page template
+
+├── assets/                   ; Assets for theme (CSS, JS, Images, Fonts)
+│   ├── css/
+│   │   ├── bootstrap.min.css     ; Bootstrap 5 stylesheet
+│   │   ├── harshone.css          ; Main theme stylesheet (custom styles)
+│   │   ├── woocommerce.css       ; WooCommerce specific styles
+│   │   ├── editor-style.css      ; Styles for the WordPress editor
+│   │   └── font-awesome.min.css  ; Icon font library
+│   ├── js/
+│   │   ├── bootstrap.bundle.min.js ; Bootstrap 5 JavaScript bundle (includes Popper.js)
+│   │   ├── harshone.js           ; Main theme JavaScript (custom scripts)
+│   │   └── skip-link-focus-fix.js; Accessibility JS helper
+│   ├── images/
+│   │   ├── logo.png              ; Default logo
+│   │   ├── footer-logo.png       ; Optional footer logo
+│   │   ├── favicon.ico           ; Favicon
+│   │   └── placeholders/         ; Placeholder images
+│   └── fonts/
+│       └── ...                   ; Custom fonts if any
+
+├── inc/                      ; Include directory for theme functionalities
+│   ├── config.php                ; Main theme setup, add_theme_support, constants
+│   ├── enqueue.php               ; Enqueue scripts and styles
+│   ├── template-functions.php    ; Helper functions for templates
+│   ├── pagination.php            ; Custom pagination functions
+│   ├── breadcrumbs.php           ; Custom breadcrumbs functions
+│   ├── custom-comments.php       ; Custom comment display callback
+│   ├── custom-header.php         ; Custom header feature functions (if needed)
+│   ├── maintenance-mode.php      ; Logic for activating and displaying maintenance page
+│   ├── widgets.php               ; Register custom widgets
+│   ├── elementor-compatibility.php ; Elementor specific integrations/overrides
+│   ├── woocommerce/              ; WooCommerce specific functions and template overrides
+│   │   ├── woocommerce-functions.php ; WooCommerce related theme functions
+│   │   ├── template-hooks.php    ; Remove/add default WooCommerce hooks
+│   │   └── class-harshone-woocommerce.php ; WC specific class if needed
+│   ├── redux/                    ; Redux Framework core files (usually bundled, not modified)
+│   │   └── ...                   ; Redux Framework files
+│   ├── theme-options/            ; HarshOne specific Redux options configuration
+│   │   ├── config.php            ; Defines all Redux options panels, fields etc.
+│   │   └── sanitize-callback.php ; Custom sanitation callbacks for Redux
+│   ├── tgm/                      ; TGM Plugin Activation Class (for bundling plugins)
+│   │   ├── class-tgm-plugin-activation.php ; TGM core class
+│   │   └── config.php            ; Defines required/recommended plugins (Elementor, WooCommerce, Redux, One-Click Demo Import)
+│   ├── one-click-demo-import/    ; One Click Demo Import configuration
+│   │   ├── config.php            ; Defines demo content files, titles etc.
+│   │   └── readme.txt            ; Instructions for users if manual import needed
+│   ├── theme-updater/            ; Custom theme update functionality
+│   │   └── class-harshone-updater.php ; Class to handle updates from punsys.com
+│   └── class-harshone-core.php   ; Main theme class for bootstrapping everything
+
+├── languages/                ; Translation files
+│   ├── harshone.pot              ; Portable object template file for translation
+│   └── en_US.po                  ; Example translation file
+│   └── en_US.mo                  ; Example compiled translation file
+
+├── template-parts/           ; Modular template parts
+│   ├── content/                  ; General content loops
+│   │   ├── content-none.php      ; No content found message
+│   │   ├── content-page.php      ; Page content template
+│   │   ├── content-single.php    ; Single post content template
+│   │   ├── content.php           ; Standard post content template
+│   │   └── content-search.php    ; Search result content template
+│   ├── headers/                  ; Different header designs
+│   │   ├── header-style1.php     ; First header design
+│   │   └── header-style2.php     ; Second header design
+│   ├── footers/                  ; Different footer designs
+│   │   ├── footer-style1.php     ; First footer design
+│   │   └── footer-style2.php     ; Second footer design
+│   ├── post-formats/             ; If supporting post formats
+│   │   └── ...
+│   └── woocommerce/              ; Custom WooCommerce template overrides (if not in child theme)
+│       ├── archive-product.php   ; Product archives
+│       ├── single-product.php    ; Single product
+│       ├── content-product.php   ; Product loop content
+│       └── ...                   ; Other WC templates as needed
+
+├── documentation/            ; Theme Documentation (required by ThemeForest)
+│   ├── index.html                ; Main documentation file
+│   ├── assets/                   ; Images, CSS, JS for documentation
+│   └── changelog.txt             ; Detailed log of changes and updates
+
+├── license.txt               ; Theme license information (GPL v2 or later for theme, other licenses for assets)
+├── readme.txt                ; Basic theme information and installation notes
+
+
+
+Thoughts
+Expand to show model's summarized thoughts
+Okay, this is a very detailed request! Creating a full premium WordPress theme with all these features and compliance aspects is a substantial task. I will generate a highly structured skeleton with comprehensive comments and essential boilerplate code for each file as per your specified directory structure and requirements.
+
+Important Notes for a Real ThemeForest Submission:
+
+Redux Framework: While I'll place placeholders for inc/redux/, for ThemeForest, Redux is almost always bundled as a required plugin via TGM Plugin Activation, not directly included in the theme's inc folder. This is due to licensing and best practices (plugins are meant to be plugins). I will configure TGM to recommend it as a plugin.
+Actual Content: The code will provide the structure and logic. You'll need to fill in the actual HTML, CSS, JavaScript, and custom logic for the specific header/footer designs, general styling, and advanced features.
+Demo Content: The punsys/demo URL is a placeholder. For One Click Demo Import, this usually points to XML, WIE, and JSON files hosted on your server.
+Update Server: https://punsys/update is also a placeholder for your update server.
+Security/Best Practices: All code will follow WordPress coding standards, use proper escaping, sanitization, and localization practices.
+screenshot.png: I cannot generate an image, but I will include its path.
+Copyright/License: These are placeholders.
+Theme Check: A real ThemeForest submission would require passing "Theme Check" plugin tests. The generated structure aims for this.
+File Permissions: Ensure correct file permissions on your server when deploying a real theme.
+Let's begin generating the files.
+
+
+Header:
+design 5 different types of header templates for theme. Responsive and bootstrap. Customization options as as per template selection. option to change background colour, font, font size, font colour of header and top bar. option to show and hide one mega menu. logo hide/show, light, dark, mobile and size option. Optional User input Phone number, address and button link on Top bar. Top bar show and hide option. Show cart and shop icon if Woocommerce enabled.
+Footer:
+
+
+
+theme options:
+show and hide breadcrumbs with edit options.
+show and hide page title section with adjustment options
+Page title size adjustment width 100% and custom height.
+Page title background image option required.
+add any more useful options if available.
+Each page needs to use custom page title, separate header and footer selection option.
+
+
+// Add the Metaboxes to Redux
+if ( isset( $metaboxes ) && is_array( $metaboxes ) && class_exists( 'Redux' ) ) {
+    error_log('HARSHONE DEBUG: Condition for setting metaboxes IF statement PASSED.');
+	foreach ( $metaboxes as $metabox ) {
+        error_log('HARSHONE DEBUG: Calling Redux_Metaboxes::set_box for metabox ID: ' . (isset($metabox['id']) ? $metabox['id'] : 'UNKNOWN_ID'));
+        error_log('HARSHONE DEBUG: Metabox config dump: ' . print_r($metabox, true));
+		Redux_Metaboxes::set_box( 'harshone_options', $metabox ); 
+        error_log('HARSHONE DEBUG: Redux_Metaboxes::set_box function call completed (no fatal PHP error reported immediately after this line).');
+	}
+} else {
+    error_log('HARSHONE DEBUG: Condition for setting metaboxes IF statement FAILED. Metaboxes were NOT processed.');
+    error_log('HARSHONE DEBUG: $metaboxes exists: ' . (isset($metaboxes) ? 'YES' : 'NO'));
+    error_log('HARSHONE DEBUG: $metaboxes is array: ' . (is_array($metaboxes) ? 'YES' : 'NO'));
+    error_log('HARSHONE DEBUG: Redux class exists: ' . (class_exists('Redux') ? 'YES' : 'NO'));
+    error_log('HARSHONE DEBUG: Redux_Metaboxes class exists: ' . (class_exists('Redux_Metaboxes') ? 'YES' : 'NO'));
+}

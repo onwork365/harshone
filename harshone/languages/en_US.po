@@ -1,0 +1,563 @@
+# This file is distributed under the same license as the Harshone theme.
+# Copyright (C) 2023 Harshone Themes
+# This file is distributed under the same license as the Harshone theme.
+# Harshone Team <harshone@harshonethemes.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: Harshone 1.0.0\n"
+"Report-Msgid-Bugs-To: https://harshonethemes.com/contact\n"
+"POT-Creation-Date: 2023-11-01 10:00+0000\n"
+"PO-Revision-Date: 2025-05-30 21:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: Harshone Team <harshone@harshonethemes.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Loco-Version: 2.8.0; wp-6.8.1; php-8.2.4"
+
+#: functions.php:24 inc/config.php:127
+msgid "Skip to content"
+msgstr ""
+
+#: inc/class-harshone-core.php:82
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/class-harshone-core.php:83
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/class-harshone-core.php:123
+msgid "Primary"
+msgstr ""
+
+#: inc/class-harshone-core.php:129
+msgid "Secondary"
+msgstr ""
+
+#: inc/class-harshone-core.php:154
+msgid "Blog Sidebar"
+msgstr ""
+
+#: inc/class-harshone-core.php:155
+msgid "Add widgets here to appear in your blog sidebar."
+msgstr ""
+
+#: inc/class-harshone-core.php:162
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#: inc/class-harshone-core.php:163
+msgid "Add widgets here to appear in your WooCommerce shop and product pages."
+msgstr ""
+
+#: inc/class-harshone-core.php:171
+#, php-format
+msgid "Footer Column %d"
+msgstr ""
+
+#: inc/class-harshone-core.php:172
+#, php-format
+msgid "Add widgets here to appear in your footer column %d."
+msgstr ""
+
+#: inc/config.php:68
+msgid "Search for: %s"
+msgstr ""
+
+#: inc/config.php:79
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/template-functions.php:38
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-functions.php:49
+msgid "by %s"
+msgstr ""
+
+#: inc/template-functions.php:60
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/template-functions.php:68
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/template-functions.php:76
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: inc/pagination.php:24
+msgid "Older posts"
+msgstr ""
+
+#: inc/pagination.php:25
+msgid "Newer posts"
+msgstr ""
+
+#: inc/pagination.php:48
+msgid "Page navigation"
+msgstr ""
+
+#: inc/breadcrumbs.php:31
+msgid "Home"
+msgstr ""
+
+#: inc/breadcrumbs.php:45
+msgid "Shop"
+msgstr ""
+
+#: inc/breadcrumbs.php:74
+#, php-format
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: inc/breadcrumbs.php:76
+msgid "404 Not Found"
+msgstr ""
+
+#: inc/custom-comments.php:121
+msgid "Pingback: %s"
+msgstr ""
+
+#: inc/custom-comments.php:163
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/custom-comments.php:178
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/maintenance-mode.php:11
+msgid "Under Maintenance"
+msgstr ""
+
+#: inc/maintenance-mode.php:65
+msgid "We are currently under maintenance!"
+msgstr ""
+
+#: inc/maintenance-mode.php:66
+msgid ""
+"Sorry for the inconvenience. Our website is currently undergoing planned "
+"maintenance and will be back shortly."
+msgstr ""
+
+#: inc/maintenance-mode.php:67
+msgid "Thank you for your patience!"
+msgstr ""
+
+#: inc/widgets.php:34
+msgid "Harshone: Recent Posts"
+msgstr ""
+
+#: inc/widgets.php:35
+msgid "Displays your most recent posts with thumbnails."
+msgstr ""
+
+#: inc/widgets.php:107
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets.php:111
+msgid "Number of posts to show:"
+msgstr ""
+
+#: inc/widgets.php:115
+msgid "Display post date?"
+msgstr ""
+
+#: inc/widgets.php:119
+msgid "Display post thumbnail?"
+msgstr ""
+
+#: index.php:28 template-parts/content/content-none.php:17 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: comments.php:40
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:43
+#, php-format
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:70
+msgid "Comments are closed."
+msgstr ""
+
+#: 404.php:26
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:40
+msgid "Most Used Categories"
+msgstr ""
+
+#: 404.php:57
+msgid "Try looking in the monthly archives. :)"
+msgstr ""
+
+#: searchform.php:10
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:14
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:15
+msgid "Search"
+msgstr ""
+
+#: template-parts/content/content-none.php:30
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content/content-none.php:34
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content/content-none.php:41
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content/content-page.php:35
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/headers/header-style1.php:56
+#: template-parts/headers/header-style2.php:55
+msgid "Toggle navigation"
+msgstr ""
+
+#: template-parts/headers/header-style1.php:34
+#: template-parts/headers/header-style2.php:33
+msgid "View your shopping cart"
+msgstr ""
+
+#: template-parts/headers/header-style1.php:35
+#: template-parts/headers/header-style2.php:34
+msgid "My Account"
+msgstr ""
+
+#: template-parts/footers/footer-style2.php:49
+msgid "Quick Links"
+msgstr ""
+
+#: inc/tgm/config.php:79
+msgid "Are you sure?"
+msgstr ""
+
+#: inc/tgm/config.php:80
+msgid ""
+"Importing demo content will overwrite your existing site content, widgets, "
+"menus, and theme options. We recommend doing this on a fresh WordPress "
+"installation. Are you sure you want to proceed?"
+msgstr ""
+
+#: inc/theme-updater/class-harshone-updater.php:178
+msgid "No changelog available."
+msgstr ""
+
+#: inc/theme-options/config.php:48
+msgid "General Settings"
+msgstr ""
+
+#: inc/theme-options/config.php:58
+msgid "Upload Logo"
+msgstr ""
+
+#: inc/theme-options/config.php:59
+msgid "Upload your custom site logo here."
+msgstr ""
+
+#: inc/theme-options/config.php:60
+msgid "Recommended size: 200x80 pixels."
+msgstr ""
+
+#: inc/theme-options/config.php:67
+msgid "Upload Favicon"
+msgstr ""
+
+#: inc/theme-options/config.php:68
+msgid "Upload your custom favicon.ico here."
+msgstr ""
+
+#: inc/theme-options/config.php:69
+msgid "Recommended format: .ico, size: 32x32px."
+msgstr ""
+
+#: inc/theme-options/config.php:76
+msgid "Site Layout"
+msgstr ""
+
+#: inc/theme-options/config.php:77
+msgid "Choose between boxed or full-width layout."
+msgstr ""
+
+#: inc/theme-options/config.php:80
+msgid "Full Width"
+msgstr ""
+
+#: inc/theme-options/config.php:81
+msgid "Boxed"
+msgstr ""
+
+#: inc/theme-options/config.php:87
+msgid "Back to Top Button"
+msgstr ""
+
+#: inc/theme-options/config.php:88
+msgid "Enable or disable the scroll-to-top button."
+msgstr ""
+
+#: inc/theme-options/config.php:94
+msgid "Enable Preloader"
+msgstr ""
+
+#: inc/theme-options/config.php:95
+msgid "Show a loading animation before the page fully loads."
+msgstr ""
+
+#: inc/theme-options/config.php:104
+msgid "Header"
+msgstr ""
+
+#: inc/theme-options/config.php:114
+msgid "Select Header Style"
+msgstr ""
+
+#: inc/theme-options/config.php:115
+msgid "Choose from 2 distinct header designs."
+msgstr ""
+
+#: inc/theme-options/config.php:126
+msgid "Enable Topbar"
+msgstr ""
+
+#: inc/theme-options/config.php:132
+msgid "Header Phone Number"
+msgstr ""
+
+#: inc/theme-options/config.php:138
+msgid "Header Email Address"
+msgstr ""
+
+#: inc/theme-options/config.php:147
+msgid "Footer"
+msgstr ""
+
+#: inc/theme-options/config.php:157
+msgid "Select Footer Style"
+msgstr ""
+
+#: inc/theme-options/config.php:158
+msgid "Choose from 2 distinct footer designs."
+msgstr ""
+
+#: inc/theme-options/config.php:169
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/theme-options/config.php:175
+msgid "Enable Social Links in Footer"
+msgstr ""
+
+#: inc/theme-options/config.php:182
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/theme-options/config.php:189
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/theme-options/config.php:198
+msgid "Typography"
+msgstr ""
+
+#: inc/theme-options/config.php:205
+msgid "Body Font"
+msgstr ""
+
+#: inc/theme-options/config.php:206
+msgid "Select the font for the body content."
+msgstr ""
+
+#: inc/theme-options/config.php:220
+msgid "Heading Font"
+msgstr ""
+
+#: inc/theme-options/config.php:221
+msgid "Select the font for H1-H6 headings."
+msgstr ""
+
+#: inc/theme-options/config.php:237
+msgid "WooCommerce"
+msgstr ""
+
+#: inc/theme-options/config.php:244
+msgid "Shop Layout"
+msgstr ""
+
+#: inc/theme-options/config.php:246
+msgid "Right Sidebar"
+msgstr ""
+
+#: inc/theme-options/config.php:247
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/theme-options/config.php:248
+msgid "No Sidebar"
+msgstr ""
+
+#: inc/theme-options/config.php:254
+msgid "Products per page"
+msgstr ""
+
+#: inc/theme-options/config.php:261
+msgid "Show Related Products"
+msgstr ""
+
+#: inc/theme-options/config.php:269
+msgid "Maintenance Mode"
+msgstr ""
+
+#: inc/theme-options/config.php:276
+msgid "Enable Maintenance Mode"
+msgstr ""
+
+#: inc/theme-options/config.php:277
+msgid ""
+"Puts your site into maintenance mode, displaying a custom page to non-logged-"
+"in users."
+msgstr ""
+
+#: inc/theme-options/config.php:284
+msgid "Maintenance Mode Logo"
+msgstr ""
+
+#: inc/theme-options/config.php:285
+msgid "Upload a logo to display on the maintenance page."
+msgstr ""
+
+#: inc/theme-options/config.php:292
+msgid "Maintenance Page Heading"
+msgstr ""
+
+#: inc/theme-options/config.php:298
+msgid "Maintenance Page Text"
+msgstr ""
+
+#: inc/theme-options/config.php:299
+msgid ""
+"Sorry for the inconvenience. Our website is currently undergoing planned "
+"maintenance and will be back shortly. Thank you for your patience!"
+msgstr ""
+
+#: inc/woocommerce/woocommerce-functions.php:73
+msgid "View your shopping cart"
+msgstr ""
+
+#: inc/woocommerce/woocommerce-functions.php:165
+msgid "N/A"
+msgstr ""
+
+#: inc/woocommerce/woocommerce-functions.php:167
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/woocommerce/woocommerce-functions.php:169
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: template-parts/woocommerce/single-product/up-sells.php:33
+msgid "You may also like&hellip;"
+msgstr ""
+
+#: template-parts/woocommerce/single-product/related.php:33
+msgid "Related products"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:29
+msgid "Remove item"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:30
+msgid "Thumbnail"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:31
+msgid "Product"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:32
+msgid "Price"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:33
+msgid "Quantity"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:34
+msgid "Subtotal"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:69
+msgid "On backorder"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:114
+msgid "Coupon:"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:114
+msgid "Coupon code"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:114
+msgid "Apply coupon"
+msgstr ""
+
+#: template-parts/woocommerce/cart/cart.php:116
+msgid "Update cart"
+msgstr ""
+
+#: template-parts/woocommerce/cart/mini-cart.php:60
+#, php-format
+msgid "Remove %s from cart"
+msgstr ""
+
+#: template-parts/woocommerce/cart/mini-cart.php:87
+msgid "No products in the cart."
+msgstr ""
+
+#: template-parts/woocommerce/checkout/form-checkout.php:28
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: template-parts/woocommerce/checkout/form-checkout.php:38
+msgid "Your order"
+msgstr ""
