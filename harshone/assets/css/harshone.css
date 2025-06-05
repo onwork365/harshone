@@ -1,0 +1,650 @@
+/*
+Theme Name: Harshone
+Theme URI: https://themeforest.net/user/your_username/portfolio
+Author: Harshone Themes
+Author URI: https://harshonethemes.com
+Description: Harshone is a premium WordPress WooCommerce theme for modern online shops. Built with Bootstrap 5, optimized for SEO, and fully compatible with Elementor, it offers flexible header and footer options, One-Click Demo Import, and seamless updates.
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: harshone
+Domain Path: /languages
+Tags: ecommerce, woocommerce, responsive-layout, clean, modern, blog, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, jetpack, left-sidebar, news, one-column, portfolio, post-formats, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
+
+A premium WordPress WooCommerce theme for modern online shops.
+
+*/
+
+/*--------------------------------------------------------------
+# General Layout & Base Styles
+--------------------------------------------------------------*/
+html {
+    overflow-x: hidden; /* Prevent horizontal scroll due to potential overflows */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.site-content {
+    flex-grow: 1;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    max-width: 1200px; /* Consistent container width */
+}
+
+/* Clearfix for floats */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+}
+/* Ensure generic p doesn't override theme's line-height */
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+/*--------------------------------------------------------------
+# Preloader Styles
+--------------------------------------------------------------*/
+#harshone-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--harshone-preloader-bg-color, #fff); /* Uses Redux option */
+    z-index: 99999; /* Ensure it's on top of everything */
+    display: flex; /* For centering the spinner/logo */
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0s 0.5s; /* Fade out effect, then hide */
+}
+
+/* Spinner animation */
+.harshone-preloader-spinner {
+    border: 4px solid var(--harshone-preloader-spinner-secondary-color, rgba(0, 0, 0, 0.1)); /* Uses Redux option */
+    border-left-color: var(--harshone-preloader-spinner-primary-color, #007bff); /* Uses Redux option */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: harshone-spin 1s linear infinite; /* Apply rotation animation */
+}
+
+@keyframes harshone-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Preloader Logo */
+.harshone-preloader-logo {
+    max-width: 150px; /* Max size for the logo */
+    height: auto;
+    animation: harshone-fade-in 0.8s ease-out; /* Optional subtle fade in */
+}
+
+@keyframes harshone-fade-in {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Class added by JavaScript to hide the preloader */
+#harshone-preloader.fade-out {
+    opacity: 0;
+    visibility: hidden; /* Hide element completely after transition */
+}
+
+
+/*--------------------------------------------------------------
+# Header Styles (General)
+--------------------------------------------------------------*/
+.site-header {
+    /* Styles applied to all headers */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: relative; /* Ensure z-index works predictably for dropdowns */
+    z-index: 999; /* Ensure header is on top */
+}
+
+.site-logo-link {
+    display: inline-block; /* Ensure it respects width/height */
+}
+
+.site-logo {
+    max-width: 100%; /* Ensure logo doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Control logo visibility for different devices/modes */
+.site-logo.logo-light {
+    display: block; /* Default visible */
+}
+.site-logo.logo-dark,
+.site-logo.logo-mobile {
+    display: none; /* Hidden by default */
+}
+
+/* Show dark logo on dark header styles or specific contexts */
+.header-style2 .site-logo.logo-light,
+.header-style4 .site-logo.logo-light,
+.header-style5 .site-logo.logo-light {
+    display: none;
+}
+.header-style2 .site-logo.logo-dark,
+.header-style4 .site-logo.logo-dark,
+.header-style5 .site-logo.logo-dark {
+     display: block;
+}
+
+/* Show mobile logo on smaller screens if set */
+@media (max-width: 991.98px) { /* Bootstrap's 'lg' breakpoint */
+     .site-logo.logo-mobile {
+         display: block;
+     }
+     .site-logo.logo-light,
+     .site-logo.logo-dark {
+         display: none;
+     }
+}
+
+/* Header Top Bar */
+.top-bar {
+    font-size: 0.85em;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.top-bar-info span,
+.top-bar-info a {
+    display: inline-block;
+    padding-right: 15px;
+    margin-right: 0; /* Reset default margins */
+}
+
+/* Main Navigation (Common styles for all navs) */
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.main-navigation .navbar-nav .nav-item.current-menu-item .nav-link,
+.main-navigation .navbar-nav .nav-item.current_page_item .nav-link,
+.main-navigation .navbar-nav .nav-link:hover,
+.main-navigation .navbar-nav .nav-link.active {
+    color: var(--harshone-main-header-link-color, #007bff);
+    font-weight: 600;
+}
+
+
+/* Dropdown menus (basic styling for Bootstrap) */
+.main-navigation .dropdown-menu {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 0;
+    border-radius: 0;
+    padding: 0; /* Remove default padding */
+}
+.main-navigation .dropdown-item {
+    font-size: 0.95em;
+    padding: 8px 15px;
+    white-space: nowrap; /* Prevent breaking for menu items */
+}
+.main-navigation .dropdown-item:hover,
+.main-navigation .dropdown-item:focus {
+    background-color: #f5f5f5;
+    color: var(--harshone-main-header-link-color, #007bff);
+}
+
+/* Header Action Icons (Search, Cart, etc.) */
+.header-actions .search-icon,
+.header-actions .cart-contents,
+.navbar-right-area .search-icon,
+.navbar-right-area .cart-contents {
+    display: inline-block;
+    margin-left: 20px;
+    color: var(--harshone-main-header-text-color, #333);
+    font-size: 1.1em;
+    text-decoration: none; /* Remove underline */
+}
+.header-actions .cart-contents .count {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 0.7em;
+    margin-left: 5px;
+    vertical-align: super;
+}
+
+/* Specific Header Styles */
+/* Header Style 1 (Example - already in base template) */
+.header-style1 .site-logo-link {
+    margin-right: 20px;
+}
+.header-style1 .navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Header Style 2 (Example - Navbar inside flex, distinct nav presentation) */
+.header-style2 .main-header-area {
+    border-bottom: 1px solid #eee;
+}
+.header-style2 .navbar {
+    padding: 0; /* Override default padded navbar */
+}
+.header-style2 .navbar-nav .nav-link {
+    text-transform: uppercase;
+}
+.header-style2 .harshone-woocommerce-cart-icon-and-count a {
+    color: var(--harshone-topbar-link-color, #fff); /* Ensure cart icon color is controllable by topbar setting */
+}
+
+/* Header Style 3 */
+.header-style3 .navbar {
+    border-bottom: 1px solid #eee;
+    position: relative; /* For absolutely positioned logo */
+}
+.header-style3 .navbar-left-area .navbar-nav {
+    flex-direction: row; /* Force horizontal for left nav */
+    justify-content: flex-start;
+}
+.header-style3 .navbar-left-area .nav-item {
+    margin-right: 15px;
+}
+.header-style3 .site-branding {
+    position: absolute; /* Position logo absolutely for center-split nav */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100; /* Ensure it's above nav if needed */
+}
+/* Adjust main nav items if needed (e.g., set max-width) */
+.header-style3 .navbar-collapse {
+    justify-content: space-between; /* To push nav items to sides */
+}
+
+/* Header Style 4 */
+.header-style4 .top-bar {
+    border-bottom: none; /* No border for top bar if solid color */
+}
+.header-style4 .navbar {
+    border-bottom: 1px solid #eee;
+}
+
+/* Header Style 5 (Off-canvas) */
+.header-style5 .offcanvas-header {
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+.header-style5 .offcanvas-body .navbar-nav li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee; /* Separator for mobile nav items */
+}
+.header-style5 .offcanvas-body .navbar-nav li:last-child {
+    border-bottom: none;
+}
+.header-style5 .offcanvas-body .navbar-nav li a {
+    color: #333; /* Default text color in offcanvas */
+    display: block;
+    padding: 0; /* Reset internal padding */
+}
+.header-style5 .offcanvas-body .btn {
+    width: 100%;
+}
+.header-style5 .navbar-toggler {
+    border: none; /* Remove default bootstrap border */
+    font-size: 24px; /* Make icon larger */
+}
+.header-style5 .navbar-toggler:focus {
+    box-shadow: none; /* Remove focus outline */
+}
+.header-style5 .offcanvas-body .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+.header-style5 .offcanvas-body .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Footer Styles (General)
+--------------------------------------------------------------*/
+.site-footer {
+    color: #666;
+    padding-top: 50px;
+    border-top: 1px solid #eee;
+    position: relative; /* Ensure general stacking context */
+    z-index: 10; /* Lower than header */
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.site-footer .footer-widgets,
+.site-footer .footer-upper {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.05); /* Example separator */
+    margin-bottom: 30px;
+}
+.site-footer .footer-upper.border-bottom {
+    border-color: rgba(255,255,255,0.1) !important; /* For dark footers */
+}
+
+
+.site-footer .widget-title,
+.site-footer .footer-heading {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.site-footer .site-info {
+    font-size: 0.85em;
+    padding-top: 20px;
+}
+
+/* Footer Bottom Bar */
+.bottom-bar {
+    font-size: 0.85em;
+    padding: 15px 0;
+}
+
+/* Social Media Icons */
+.harshone-social-links .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #555;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+.harshone-social-links .social-icon:hover {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+}
+.harshone-social-links .social-icon:last-child {
+    margin-right: 0; /* Remove margin from last icon */
+}
+
+/* Specific Footer Styles */
+/* Footer Style 1 (Example - 4 columns, simple bottom) */
+.footer-style1 {
+    background-color: var(--harshone-footer-main-bg-color, #f8f8f8);
+    color: var(--harshone-footer-main-text-color, #666);
+}
+.footer-style1 .site-info {
+    background-color: var(--harshone-footer-bottombar-bg-color, #f8f8f8); /* Example: same as main footer */
+    color: var(--harshone-footer-bottombar-text-color, #666);
+}
+
+/* Footer Style 2 (Example - Dark background, multi-section, social links) */
+.footer-style2 {
+    background-color: var(--harshone-footer-main-bg-color, #222); /* Dark default */
+    color: var(--harshone-footer-main-text-color, #eee);
+}
+.footer-style2 a {
+    color: var(--harshone-footer-main-link-color, #fff);
+}
+.footer-style2 .widget-title,
+.footer-style2 .footer-heading {
+    color: var(--harshone-footer-main-text-color, #fff);
+}
+.footer-style2 .site-info {
+    background-color: var(--harshone-footer-bottombar-bg-color, #1a1a1a);
+    color: var(--harshone-footer-bottombar-text-color, #aaa);
+}
+.footer-style2 .harshone-social-links .social-icon {
+    background-color: #444;
+    color: #fff;
+}
+.footer-style2 .harshone-social-links .social-icon:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Footer Style 3 */
+.footer-style3 {
+    background-color: var(--harshone-footer-main-bg-color, #f8f8f8);
+    color: var(--harshone-footer-main-text-color, #666);
+}
+.footer-style3 .input-group input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.footer-style3 .input-group button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.footer-style3 .site-info.bottom-bar {
+    background-color: var(--harshone-footer-bottombar-bg-color, #f8f8f8); /* Example: same as main footer */
+    color: var(--harshone-footer-bottombar-text-color, #666);
+}
+
+/* Footer Style 4 */
+.footer-style4 {
+    background-color: var(--harshone-footer-main-bg-color, #222); /* Same as style2, dark */
+    color: var(--harshone-footer-main-text-color, #eee);
+}
+.footer-style4 .site-info.bottom-bar {
+    background-color: var(--harshone-footer-bottombar-bg-color, #1a1a1a);
+    color: var(--harshone-footer-bottombar-text-color, #aaa);
+}
+.footer-style4 a {
+    color: inherit; /* Inherit color from parent */
+}
+.footer-style4 .bottom-bar a:hover {
+    color: #fff; /* Specific link color for bottom bar */
+}
+.footer-style4 .border-bottom.border-light.opacity-25 {
+    border-color: rgba(255,255,255,0.25) !important;
+}
+
+/* Footer Style 5 */
+.footer-style5 {
+    background-color: var(--harshone-footer-main-bg-color, #007bff); /* Primary color background */
+    color: var(--harshone-footer-main-text-color, #fff);
+}
+.footer-style5 .site-info.bottom-bar {
+    background-color: var(--harshone-footer-bottombar-bg-color, #0056b3); /* Slightly darker primary */
+    color: var(--harshone-footer-bottombar-text-color, #fff);
+}
+.footer-style5 .list-inline .list-inline-item {
+    margin-bottom: 0.5rem; /* Adjust some spacing */
+}
+.footer-style5 .harshone-social-links .social-icon {
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+.footer-style5 .harshone-social-links .social-icon:hover {
+    background-color: #fff;
+    color: #007bff;
+}
+
+/*--------------------------------------------------------------
+# Page Title Section
+--------------------------------------------------------------*/
+.page-title-section {
+    position: relative;
+    padding: 60px 0; /* Default padding, will be adjusted by min-height option */
+    color: #fff; /* Default text color for titles/breadcrumbs on image background */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden; /* Ensure content doesn't overflow if there are issues */
+}
+
+.page-title-section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Background color and opacity set via Redux dynamic CSS */
+    z-index: 1; /* Below content, above background image */
+}
+
+.page-title-section .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above overlay */
+}
+
+.page-title-section h1.entry-title {
+    margin-bottom: 15px; /* Space between title and breadcrumbs */
+    color: var(--harshone-page-title-color, #333333); /* Uses Redux option */
+}
+
+.page-title-section .harshone-breadcrumbs {
+    /* Styles for breadcrumbs within the page title section */
+    font-size: 0.9em;
+    color: var(--harshone-page-title-breadcrumbs-color, #666666); /* Uses Redux option */
+}
+
+.page-title-section .harshone-breadcrumbs a {
+    color: inherit;
+    text-decoration: none;
+}
+.page-title-section .harshone-breadcrumbs a:hover {
+    text-decoration: underline;
+}
+.page-title-section .harshone-breadcrumbs .breadcrumb-item + .breadcrumb-item::before {
+    /* Breadcrumbs separator, based on Bootstrap CSS */
+    content: var(--harshone-breadcrumbs-separator, "/"); /* Uses Redux option from template-functions */
+    display: inline-block;
+    padding-right: var(--bs-breadcrumb-divider-padding);
+    color: var(--bs-breadcrumb-divider-color);
+}
+.page-title-section .harshone-breadcrumbs .breadcrumb-item.active {
+    color: inherit;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) { /* Bootstrap's 'lg' breakpoint */
+    .top-bar .top-bar-actions,
+    .top-bar .top-bar-info {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    .top-bar-info {
+        margin-bottom: 10px; /* Space between info and actions */
+    }
+    .top-bar .top-bar-actions {
+        margin-top: 0;
+    }
+    .main-navigation .navbar-nav {
+        margin-top: 15px;
+        text-align: center;
+    }
+    .main-navigation .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+    .main-navigation .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100%;
+        margin-top: 5px;
+        box-shadow: none; /* Remove shadow on mobile dropdowns */
+    }
+
+    .site-footer .col-md-6,
+    .site-footer .col-lg-3,
+    .site-footer .col-lg-2,
+    .site-footer .col-lg-4,
+    .site-footer .site-info > div {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    /* Counteract default margins of Bootstrap columns for centered mobile layouts */
+    .site-footer .col-md-6,
+    .site-footer [class^="col-lg-"] {
+        margin-bottom: 20px; /* Consistent spacing */
+    }
+    .site-footer .harshone-social-links {
+        justify-content: center; /* Center social icons on mobile */
+    }
+    .footer-style3 .input-group {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Hide desktop-only elements on smaller screens */
+    .header-style3 .navbar-left-area,
+    .header-style3 .navbar-right-area {
+        display: none !important;
+    }
+    .header-style3 .site-branding {
+        position: static; /* Reset absolute positioning */
+        transform: none;
+        margin: auto; /* Center it */
+        width: 100%; /* Take full width */
+        text-align: center;
+    }
+    .header-style3 .navbar-toggler {
+        /* Adjust toggler position relative to logo */
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .header-style5 .offcanvas-body {
+        /* Add specific offcanvas body styles */
+        padding: 15px;
+    }
+    .header-style5 .offcanvas-body .navbar-nav {
+        margin-top: 20px; /* Space from header */
+    }
+
+}

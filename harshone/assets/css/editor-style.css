@@ -1,0 +1,132 @@
+/*
+Editor Style for Harshone
+This stylesheet is loaded in the WordPress editor (Gutenberg and Classic)
+to provide a more accurate preview of how content will look on the front-end.
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 2em; /* Add some padding around the content in the editor */
+}
+
+/* Basic typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+article.post, article.page {
+    /* Style for the main content area to mimic front-end */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Image alignment */
+.alignleft { float: left; margin-right: 1.5em; margin-bottom: 1.5em; }
+.alignright { float: right; margin-left: 1.5em; margin-bottom: 1.5em; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+/* Captions */
+.wp-caption {
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.wp-caption-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Block editor specific styles */
+.wp-block {
+    max-width: 700px; /* Adjust block width to match your theme's content width */
+}
+
+/* Wider and full-width blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1000px; /* Example wide width */
+}
+.wp-block[data-align="full"] {
+    max-width: none; /* Full width */
+}
+
+/* Add styles for common Gutenberg blocks (e.g., buttons, galleries, quotes) */
+.wp-block-button .wp-block-button__link {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+    background-color: #0056b3;
+}
+
+blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 15px;
+    margin-left: 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Ensure images fit within content editor */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wp-block-image img { /* specific for image block */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* example shadow */
+    border-radius: 4px;
+}
+
+/* List styles */
+ul, ol {
+    margin-bottom: 1em;
+    padding-left: 20px;
+}
+
+/* WooCommerce Gutenberg blocks (if applicable) */
+.wc-block-grid__product-title {
+    font-weight: bold;
+}
+.wc-block-grid__product-price {
+    color: #007bff;
+    font-size: 1.1em;
+}

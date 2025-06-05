@@ -1,0 +1,80 @@
+/* Responsive adjustments for HarshOne */
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    .site-branding .site-title {
+        font-size: 1.5em;
+    }
+
+    .main-navigation ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-navigation ul li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+    .main-navigation ul ul {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        min-width: unset;
+    }
+    .main-navigation .menu-toggle { /* If using a mobile menu toggle */
+        display: block;
+    }
+
+    .site-info {
+        font-size: 0.9em;
+    }
+
+    .footer-widgets .col-md-3 {
+        margin-bottom: 30px;
+    }
+    .footer-widgets .col-md-3:last-child {
+        margin-bottom: 0;
+    }
+
+    /* WooCommerce */
+    .woocommerce ul.products li.product {
+        width: 100%; /* Make products full width on small screens */
+    }
+    .woocommerce div.product .summary,
+    .woocommerce div.product div.images {
+        float: none;
+        width: 100%;
+    }
+    .woocommerce-tabs ul.tabs li {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .site-branding .site-title {
+        font-size: 1.8em;
+    }
+
+    .main-navigation ul {
+        flex-wrap: wrap; /* Allow menu items to wrap */
+        justify-content: center;
+    }
+    .main-navigation ul li {
+        /* Adjust for smaller screens */
+        margin: 5px;
+    }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 768px) {
+    /* No specific overrides here, default desktop style */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px; /* Example setting */
+    }
+}
